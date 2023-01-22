@@ -12,9 +12,17 @@ const saveProducts = async () => {
 };
 
 const getProducts = async () => {
-    await Products.find();
-}
+  await Products.find();
+};
 
-const productsById = async() => {
-    await Products.findById("63cd6bd7581ced6f14b5f5f6")
-}
+const productsById = async () => {
+  await Products.findById("63cd6bd7581ced6f14b5f5f6");
+};
+
+const updateProducts = async () => {
+  await Products.findByIdAndUpdate(
+    "63cd6dd6b9594c8780a4db6d",
+    {},
+    { new: true }
+  );
+};
