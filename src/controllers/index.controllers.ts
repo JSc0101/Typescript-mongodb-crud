@@ -26,3 +26,7 @@ const updateProducts = async () => {
     { new: true }
   );
 };
+
+const deleteProducts = async () => {
+  await Products.findByIdAndDelete("63cd6dd6b9594c8780a4db6d");
+};

@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Products from "./models/products";
+
 
 mongoose.set("strictQuery", true);
 const connectDB = async () => {
@@ -12,14 +12,3 @@ const connectDB = async () => {
 };
 connectDB();
 
-const saveProducts = async () => {
-  const products = new Products({
-    name: "Lapto",
-    price: 3000,
-    amount: 4,
-    date: "1991/09/24",
-  });
-  await products.save();
-  console.log(products);
-};
-saveProducts();
