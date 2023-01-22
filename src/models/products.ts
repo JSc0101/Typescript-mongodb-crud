@@ -1,15 +1,15 @@
 import { prop, getModelForClass } from "@typegoose/typegoose";
 class Products {
-  @prop()
+  @prop({ required: true, trim: true })
   name: string;
 
-  @prop()
+  @prop({ required: true, trim: true })
   price: number;
 
-  @prop()
+  @prop({ required: true, trim: true })
   amount: number;
 
-  @prop()
+  @prop({ required: true, trim: true })
   date: string;
 }
 const Modelproducts = getModelForClass(Products);
